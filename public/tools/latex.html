@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>支点学社 - LaTeX 编辑器</title>
+    <link rel="stylesheet" href="../../src/assets/styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Ma+Shan+Zheng&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- 粒子背景 -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="../../src/assets/circle.webp" alt="支点学社Logo" class="logo">
+                <h2 style="font-family: 'Ma Shan Zheng', cursive;">支点学社</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../../index.html#home" class="nav-link">首页</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="../news.html" class="nav-link">新闻</a>
+                    <div class="dropdown-content">
+                        <a href="../news.html#latest">最新动态</a>
+                        <a href="../news.html#archive">过往新闻</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="../journal.html" class="nav-link">社刊</a>
+                    <div class="dropdown-content">
+                        <a href="../journal.html#current">最新期刊</a>
+                        <a href="../journal.html#archive">过往期刊</a>
+                        <a href="../journal.html#nobel-prize">诺奖解读</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="../submission.html" class="nav-link">投稿</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="../activities.html" class="nav-link">活动</a>
+                    <div class="dropdown-content">
+                        <a href="../activities.html#cupt">CUPT</a>
+                        <a href="../activities.html#competition">其他竞赛</a>
+                        <a href="../activities.html#lecture">学术讲座</a>
+                        <a href="../activities.html#volunteer-teaching">支教</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="../problems.html" class="nav-link">赛题</a>
+                    <div class="dropdown-content">
+                        <a href="../problems.html#cupt-problems">CUPT赛题</a>
+                        <a href="../problems.html#original-problems">原创赛题</a>
+                        <a href="../problems.html#dawenda-problems">大文大理赛题</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="../tools.html" class="nav-link">工具</a>
+                    <div class="dropdown-content">
+                        <a href="comsol.html">COMSOL</a>
+                        <a href="matlab.html">MATLAB</a>
+                        <a href="mathematica.html">Mathematica</a>
+                        <a href="python.html">Python</a>
+                        <a href="tracker.html">Tracker</a>
+                        <a href="ansys.html">ANSYS</a>
+                        <a href="latex.html">LaTeX 编辑器</a>
+                        <a href="zotero.html">Zotero</a>
+                        <a href="3d.html">3D 打印软件</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主内容 -->
+    <main class="tool-detail-main">
+        <div class="container">
+            <!-- 工具标题区域 -->
+            <section class="tool-header">
+                <div class="tool-logo-large latex">LX</div>
+                <div class="tool-info">
+                    <h1 class="tool-title">LaTeX 编辑器</h1>
+                    <p class="tool-subtitle">专业文档排版系统</p>
+                </div>
+            </section>
+
+            <!-- 工具简介 -->
+            <section class="tool-description">
+                <h2>软件简介</h2>
+                <p>LaTeX 是一种基于 TeX 的排版系统，特别适合生成高质量的技术和科学文档。它在学术论文、书籍、报告的排版中被广泛使用，能够精确控制文档的格式和布局，特别擅长数学公式的排版。</p>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">📝</div>
+                        <h3>专业排版</h3>
+                        <p>高质量的文档排版和格式控制</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">∑</div>
+                        <h3>数学公式</h3>
+                        <p>强大的数学公式编辑和排版功能</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📚</div>
+                        <h3>文献管理</h3>
+                        <p>自动化的参考文献和引用管理</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 应用领域 -->
+            <section class="applications">
+                <h2>应用领域</h2>
+                <div class="application-tags">
+                    <span class="app-tag">学术论文</span>
+                    <span class="app-tag">技术报告</span>
+                    <span class="app-tag">书籍出版</span>
+                    <span class="app-tag">演示文稿</span>
+                    <span class="app-tag">简历制作</span>
+                    <span class="app-tag">期刊投稿</span>
+                </div>
+            </section>
+
+            <!-- 官网链接 -->
+            <section class="official-links">
+                <h2>相关链接</h2>
+                <div class="links-container">
+                    <a href="https://www.latex-project.org/" target="_blank" class="official-link">
+                        <div class="link-icon">🌐</div>
+                        <div class="link-info">
+                            <h3>LaTeX 官网</h3>
+                            <p>www.latex-project.org</p>
+                        </div>
+                    </a>
+                    <a href="https://www.overleaf.com/" target="_blank" class="official-link">
+                        <div class="link-icon">☁️</div>
+                        <div class="link-info">
+                            <h3>Overleaf 在线编辑器</h3>
+                            <p>免费的在线 LaTeX 编辑平台</p>
+                        </div>
+                    </a>
+                    <a href="https://tex.nju.edu.cn/zh/login/?from=%2Fconsole" target="_blank" class="official-link">
+                        <div class="link-icon">📚</div>
+                        <div class="link-info">
+                            <h3>TexPage</h3>
+                            <p>南京大学TexPage主页</p>
+                        </div>
+                    </a>
+                    <a href="https://www.bilibili.com/video/BV1Mc411S75c/?spm_id_from=333.337.search-card.all.click&vd_source=e6b323f524f1a8a4cffb6b1eeca617b0"
+                        target="_blank" class="official-link">
+                        <div class="link-icon">📺</div>
+                        <div class="link-info">
+                            <h3>视频教程</h3>
+                            <p>LaTeX视频教程（B站）</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>关于支点学社</h3>
+                    <p>南京大学支点学社创立于1999年，以物理为支点推动本科生科研创新，核心价值为"学术传承、科创实践、跨学科融合"。</p>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul class="quick-links-grid">
+                        <li><a href="../../index.html#home">首页</a></li>
+                        <li><a href="../news.html">新闻</a></li>
+                        <li><a href="../journal.html">社刊</a></li>
+                        <li><a href="../submission.html">投稿</a></li>
+                        <li><a href="../activities.html">活动</a></li>
+                        <li><a href="../problems.html">赛题</a></li>
+                        <li><a href="../tools.html">工具</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>联系我们</h4>
+                    <p>📧 wangylphy@nju.edu.cn</p>
+                    <p>📍 南京市栖霞区仙林大道163号</p>
+                    <p>👥 QQ群：666419575</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <img src="../../src/assets/杂志素材/支点.webp" alt="支点学社Logo" class="footer-logo">
+                <p>&copy; 2025 支点学社. All rights reserved. ICP备案/许可证编号：
+                    <a href="https://beian.miit.gov.cn/" target="_blank">豫ICP备2025144939号-1</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 脚本 -->
+    <script src="../../src/main.js"></script>
+</body>
+
+</html>

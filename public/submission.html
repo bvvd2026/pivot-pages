@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>支点学社 - 投稿</title>
+    <link rel="stylesheet" href="../src/assets/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC&family=Ma+Shan+Zheng&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- 粒子背景 -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- 导航栏 - 保持与首页一致 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="../src/assets/circle.webp" alt="支点学社Logo" class="logo">
+                <h2>支点学社</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../index.html#home" class="nav-link">首页</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="news.html" class="nav-link">新闻</a>
+                    <div class="dropdown-content">
+                        <a href="news.html#latest">最新动态</a>
+                        <a href="news.html#archive">过往新闻</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="journal.html" class="nav-link">社刊</a>
+                    <div class="dropdown-content">
+                        <a href="journal.html#current">最新期刊</a>
+                        <a href="journal.html#archive">过往期刊</a>
+                        <a href="journal.html#nobel-prize">诺奖解读</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="submission.html" class="nav-link">投稿</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="activities.html" class="nav-link">活动</a>
+                    <div class="dropdown-content">
+                        <a href="activities.html#cupt">CUPT</a>
+                        <a href="activities.html#competition">其他竞赛</a>
+                        <a href="activities.html#lecture">学术讲座</a>
+                        <a href="activities.html#volunteer-teaching">支教</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="problems.html" class="nav-link">赛题</a>
+                    <div class="dropdown-content">
+                        <a href="problems.html#cupt-problems">CUPT赛题</a>
+                        <a href="problems.html#original-problems">原创赛题</a>
+                        <a href="problems.html#dawenda-problems">大文大理赛题</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="tools.html" class="nav-link">工具</a>
+                    <div class="dropdown-content">
+                        <a href="tools/comsol.html">COMSOL</a>
+                        <a href="tools/matlab.html">MATLAB</a>
+                        <a href="tools/mathematica.html">Mathematica</a>
+                        <a href="tools/python.html">Python</a>
+                        <a href="tools/tracker.html">Tracker</a>
+                        <a href="tools/ansys.html">ANSYS</a>
+                        <a href="tools/latex.html">LaTeX 编辑器</a>
+                        <a href="tools/zotero.html">Zotero</a>
+                        <a href="tools/3d.html">3D 打印软件</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主内容区 -->
+    <section id="submission" class="section">
+        <div class="container">
+            <h1 class="section-title">社刊文献投稿</h1>
+
+            <!-- 投稿链接卡片 - 单独一行特殊样式 -->
+            <div class="submission-section">
+                <div class="submission-card-standalone">
+                    <div class="submission-content">
+                        <div class="submission-left">
+                            <div class="submission-icon">📝</div>
+                            <div class="submission-text">
+                                <h3>社刊文献投稿</h3>
+                                <p>欢迎投稿您的学术论文、实验报告和研究成果！我们期待您的创新思维和独特见解，共同丰富支点学社的社刊内容，推动学术交流与发展。</p>
+                                <div class="submission-instruction">
+                                    <div class="instruction-icon">💡</div>
+                                    <div class="instruction-text">
+                                        <strong>操作提示：</strong>进入页面后点击"<span
+                                            class="highlight-text">文章综述、学生论文、前沿介绍、文学创作、科普文章</span>"等按钮，填写相关信息即可
+                                    </div>
+                                </div>
+                                <div class="submission-features">
+                                    <span class="feature-tag">学术论文</span>
+                                    <span class="feature-tag">实验报告</span>
+                                    <span class="feature-tag">研究成果</span>
+                                    <span class="feature-tag">物理趣题</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="submission-right">
+                            <a href="https://table.nju.edu.cn/dtable/forms/ed49ecba-cc10-4e1b-8ffd-734b6ed9ff6a/"
+                                target="_blank" class="btn btn-primary submission-btn-large">
+                                <span>立即投稿</span>
+                                <span class="btn-arrow">→</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 - 保持与首页一致 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>关于支点学社</h3>
+                    <p>南京大学支点学社创立于1999年，以物理为支点推动本科生科研创新，核心价值为"学术传承、科创实践、跨学科融合"。</p>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul class="quick-links-grid">
+                        <li><a href="../index.html#home">首页</a></li>
+                        <li><a href="news.html">新闻</a></li>
+                        <li><a href="journal.html">社刊</a></li>
+                        <li><a href="submission.html">投稿</a></li>
+                        <li><a href="activities.html">活动</a></li>
+                        <li><a href="problems.html">赛题</a></li>
+                        <li><a href="tools.html">工具</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>联系我们</h4>
+                    <p>📧 wangylphy@nju.edu.cn</p>
+                    <p>📍 南京市栖霞区仙林大道163号</p>
+                    <p>👥 QQ群：666419575</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <img src="../src/assets/杂志素材/支点.webp" alt="支点学社Logo" class="footer-logo">
+                <p>&copy; 2025 支点学社. All rights reserved. ICP备案/许可证编号：
+                    <a href="https://beian.miit.gov.cn/" target="_blank">豫ICP备2025144939号-1</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../src/main.js"></script>
+</body>
+
+</html>

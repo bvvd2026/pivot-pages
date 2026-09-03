@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>支点学社 - 工具</title>
+    <link rel="stylesheet" href="../src/assets/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC&family=Ma+Shan+Zheng&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- 粒子背景 -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- 导航栏 - 保持与首页一致 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="../src/assets/circle.webp" alt="支点学社Logo" class="logo">
+                <h2>支点学社</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../index.html#home" class="nav-link">首页</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="news.html" class="nav-link">新闻</a>
+                    <div class="dropdown-content">
+                        <a href="news.html#latest">最新动态</a>
+                        <a href="news.html#archive">过往新闻</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="journal.html" class="nav-link">社刊</a>
+                    <div class="dropdown-content">
+                        <a href="journal.html#current">最新期刊</a>
+                        <a href="journal.html#archive">过往期刊</a>
+                        <a href="journal.html#nobel-prize">诺奖解读</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="submission.html" class="nav-link">投稿</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="activities.html" class="nav-link">活动</a>
+                    <div class="dropdown-content">
+                        <a href="activities.html#cupt">CUPT</a>
+                        <a href="activities.html#competition">其他竞赛</a>
+                        <a href="activities.html#lecture">学术讲座</a>
+                        <a href="activities.html#volunteer-teaching">支教</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="problems.html" class="nav-link">赛题</a>
+                    <div class="dropdown-content">
+                        <a href="problems.html#cupt-problems">CUPT赛题</a>
+                        <a href="problems.html#original-problems">原创赛题</a>
+                        <a href="problems.html#dawenda-problems">大文大理赛题</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="tools.html" class="nav-link">工具</a>
+                    <div class="dropdown-content">
+                        <a href="tools/comsol.html">COMSOL</a>
+                        <a href="tools/matlab.html">MATLAB</a>
+                        <a href="tools/mathematica.html">Mathematica</a>
+                        <a href="tools/python.html">Python</a>
+                        <a href="tools/tracker.html">Tracker</a>
+                        <a href="tools/ansys.html">ANSYS</a>
+                        <a href="tools/latex.html">LaTeX 编辑器</a>
+                        <a href="tools/zotero.html">Zotero</a>
+                        <a href="tools/3d.html">3D 打印软件</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主内容区 -->
+    <section id="comsol" class="section">
+        <div class="container">
+            <h1 class="section-title">COMSOL</h1>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <div class="tool-logo comsol">COMSOL</div>
+                    </div>
+                    <h3>COMSOL Multiphysics</h3>
+                    <p>多物理场仿真软件，广泛应用于工程、物理、化学等领域。</p>
+                    <div class="tool-features">
+                        <span class="feature">有限元分析</span>
+                        <span class="feature">多物理耦合</span>
+                        <span class="feature">数值模拟</span>
+                    </div>
+                    <a href="tools/comsol.html" class="btn btn-outline">了解更多</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="matlab" class="section">
+        <div class="container">
+            <h1 class="section-title">MATLAB</h1>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <div class="tool-logo matlab">MATLAB</div>
+                    </div>
+                    <h3>MATLAB科学计算</h3>
+                    <p>强大的数值计算和数据可视化软件，支持算法开发与仿真。</p>
+                    <div class="tool-features">
+                        <span class="feature">矩阵运算</span>
+                        <span class="feature">数据分析</span>
+                        <span class="feature">图形绘制</span>
+                    </div>
+                    <a href="tools/matlab.html" class="btn btn-outline">了解更多</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="mathematica" class="section">
+        <div class="container">
+            <h1 class="section-title">Mathematica</h1>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <div class="tool-logo mathematica">MA</div>
+                    </div>
+                    <h3>Mathematica</h3>
+                    <p>强大的符号计算和数学分析软件，支持复杂数学运算和可视化。</p>
+                    <div class="tool-features">
+                        <span class="feature">符号计算</span>
+                        <span class="feature">数学建模</span>
+                        <span class="feature">数据可视化</span>
+                    </div>
+                    <a href="tools/mathematica.html" class="btn btn-outline">了解更多</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="python-tools" class="section">
+        <div class="container">
+            <h1 class="section-title">Python工具</h1>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <div class="tool-logo python">Python</div>
+                    </div>
+                    <h3>Python科学计算库</h3>
+                    <p>NumPy, SciPy, Matplotlib等，物理科研的强大编程工具。</p>
+                    <div class="tool-features">
+                        <span class="feature">数据处理</span>
+                        <span class="feature">数值模拟</span>
+                        <span class="feature">机器学习</span>
+                    </div>
+                    <a href="tools/python.html" class="btn btn-outline">了解更多</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tracker -->
+    <section id="tracker" class="section">
+        <div class="container">
+            <h1 class="section-title">Tracker</h1>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <div class="tool-logo tracker">TR</div>
+                    </div>
+                    <h3>Tracker 视频分析</h3>
+                    <p>基于视频的运动捕捉与分析工具，适用于物理实验教学与科研。</p>
+                    <div class="tool-features">
+                        <span class="feature">视频追踪</span>
+                        <span class="feature">数据拟合</span>
+                    </div>
+                    <a href="tools/tracker.html" class="btn btn-outline">了解更多</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ANSYS -->
+    <section id="ansys" class="section">
+        <div class="container">
+            <h1 class="section-title">ANSYS</h1>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <div class="tool-logo ansys">ANSYS</div>
+                    </div>
+                    <h3>ANSYS 多物理场仿真</h3>
+                    <p>工程级仿真软件，支持结构、热、电磁等多领域耦合分析。</p>
+                    <div class="tool-features">
+                        <span class="feature">有限元</span>
+                        <span class="feature">CFD</span>
+                    </div>
+                    <a href="tools/ansys.html" class="btn btn-outline">了解更多</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LaTeX 编辑器 -->
+    <section id="latex-editor" class="section">
+        <div class="container">
+            <h1 class="section-title">LaTeX 编辑器</h1>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <div class="tool-logo latex">LaTeX</div>
+                    </div>
+                    <h3>在线 LaTeX 编辑</h3>
+                    <p>Overleaf 等协作式 LaTeX 平台，支持多人实时编辑与编译。</p>
+                    <div class="tool-features">
+                        <span class="feature">协作</span>
+                        <span class="feature">实时预览</span>
+                    </div>
+                    <a href="tools/latex.html" class="btn btn-outline">了解更多</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Zotero -->
+    <section id="zotero" class="section">
+        <div class="container">
+            <h1 class="section-title">Zotero</h1>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <div class="tool-logo zotero">ZT</div>
+                    </div>
+                    <h3>Zotero 文献管理</h3>
+                    <p>免费开源的文献管理工具，支持浏览器插件与云同步。</p>
+                    <div class="tool-features">
+                        <span class="feature">文献整理</span>
+                        <span class="feature">引用格式</span>
+                    </div>
+                    <a href="tools/zotero.html" class="btn btn-outline">了解更多</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3D 打印软件 -->
+    <section id="print3d" class="section">
+        <div class="container">
+            <h1 class="section-title">3D 打印软件</h1>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <div class="tool-logo print3d">3DP</div>
+                    </div>
+                    <h3>Cura / PrusaSlicer</h3>
+                    <p>常用切片软件，支持 STL 模型处理与打印参数优化。</p>
+                    <div class="tool-features">
+                        <span class="feature">切片</span>
+                        <span class="feature">G-code</span>
+                    </div>
+                    <a href="tools/3d.html" class="btn btn-outline">了解更多</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 - 保持与首页一致 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>关于支点学社</h3>
+                    <p>南京大学支点学社创立于1999年，以物理为支点推动本科生科研创新，核心价值为"学术传承、科创实践、跨学科融合"。</p>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul class="quick-links-grid">
+                        <li><a href="../index.html#home">首页</a></li>
+                        <li><a href="news.html">新闻</a></li>
+                        <li><a href="journal.html">社刊</a></li>
+                        <li><a href="submission.html">投稿</a></li>
+                        <li><a href="activities.html">活动</a></li>
+                        <li><a href="problems.html">赛题</a></li>
+                        <li><a href="tools.html">工具</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>联系我们</h4>
+                    <p>📧 wangylphy@nju.edu.cn</p>
+                    <p>📍 南京市栖霞区仙林大道163号</p>
+                    <p>👥 QQ群：666419575</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <img src="../src/assets/杂志素材/支点.webp" alt="支点学社Logo" class="footer-logo">
+                <p>&copy; 2025 支点学社. All rights reserved. ICP备案/许可证编号：
+                    <a href="https://beian.miit.gov.cn/" target="_blank">豫ICP备2025144939号-1</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../src/main.js"></script>
+</body>
+
+</html>

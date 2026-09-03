@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>支点学社 - 大文大理竞赛</title>
+    <link rel="stylesheet" href="../../src/assets/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC&family=Ma+Shan+Zheng&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- 粒子背景 -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="../../src/assets/circle.webp" alt="支点学社Logo" class="logo">
+                <h2>支点学社</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../../index.html#home" class="nav-link">首页</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="../news.html" class="nav-link">新闻</a>
+                    <div class="dropdown-content">
+                        <a href="../news.html#latest">最新动态</a>
+                        <a href="../news.html#archive">过往新闻</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="../journal.html" class="nav-link">社刊</a>
+                    <div class="dropdown-content">
+                        <a href="../journal.html#current">最新期刊</a>
+                        <a href="../journal.html#archive">过往期刊</a>
+                        <a href="../journal.html#nobel-prize">诺奖解读</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="../submission.html" class="nav-link">投稿</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="../activities.html" class="nav-link">活动</a>
+                    <div class="dropdown-content">
+                        <a href="../activities.html#cupt">CUPT</a>
+                        <a href="../activities.html#competition">其他竞赛</a>
+                        <a href="../activities.html#lecture">学术讲座</a>
+                        <a href="../activities.html#volunteer-teaching">支教</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="../problems.html" class="nav-link">赛题</a>
+                    <div class="dropdown-content">
+                        <a href="../problems.html#cupt-problems">CUPT赛题</a>
+                        <a href="../problems.html#original-problems">原创赛题</a>
+                        <a href="../problems.html#dawenda-problems">大文大理赛题</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="../tools.html" class="nav-link">工具</a>
+                    <div class="dropdown-content">
+                        <a href="../tools/comsol.html">COMSOL</a>
+                        <a href="../tools/matlab.html">MATLAB</a>
+                        <a href="../tools/mathematica.html">Mathematica</a>
+                        <a href="../tools/python.html">Python</a>
+                        <a href="../tools/tracker.html">Tracker</a>
+                        <a href="../tools/ansys.html">ANSYS</a>
+                        <a href="../tools/latex.html">LaTeX 编辑器</a>
+                        <a href="../tools/zotero.html">Zotero</a>
+                        <a href="../tools/3d.html">3D 打印软件</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 页面头部 -->
+    <section class="section">
+        <div class="container">
+            <div class="page-header">
+                <a href="../activities.html#competition" class="back-link">← 返回活动页面</a>
+                <h1 class="section-title">大文大理跨学科创新竞赛</h1>
+                <p class="page-description">探索文理交叉，激发创新思维，培养跨学科人才</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 竞赛简介 -->
+    <section id="introduction" class="section">
+        <div class="container">
+            <h2 class="section-subtitle">竞赛简介</h2>
+            <div class="intro-content">
+                <div class="intro-card">
+                    <div class="intro-icon">📅</div>
+                    <h3>举办时间与对象</h3>
+                    <p><strong>举办时间：</strong>3-5月正式比赛，在此之前线上征题</p>
+                    <p><strong>面向对象：</strong>全校同学</p>
+                </div>
+                <div class="intro-card">
+                    <div class="intro-icon">🎯</div>
+                    <h3>竞赛宗旨</h3>
+                    <p>为了传播科学精神，增强同学们的人文素养与科学运用的能力，支点学社联合部分社团与院系开展一年一度的大文大理知识竞赛。</p>
+                </div>
+                <div class="intro-card">
+                    <div class="intro-icon">✨</div>
+                    <h3>竞赛特色</h3>
+                    <p>竞赛规则多样，赛题涉及数理文史等多个学科，个人赛与团体赛兼顾，以期实现文科与理科、学术性与趣味性的结合，并使参与的同学了解到一些非自身专业学科的知识。</p>
+                </div>
+                <div class="intro-card">
+                    <div class="intro-icon">🤝</div>
+                    <h3>收获与成长</h3>
+                    <p>同学们可以在比赛中结识朋友，收获团队协作精神，在跨学科的知识竞技中拓宽视野，提升综合素养。</p>
+                </div>
+            </div>
+            <div style="margin-top: 30px; text-align: center;">
+                <a href="../problems.html#dawenda-problems" class="btn btn-outline" style="margin: 10px;">查看历年赛题</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 竞赛现场 -->
+    <section id="competition-gallery" class="section">
+        <div class="container">
+            <h2 class="section-subtitle">竞赛现场</h2>
+            <p style="text-align: center; color: #aaa; margin-bottom: 40px;">精彩瞬间，记录每一次思维的碰撞</p>
+
+            <div class="gallery-grid" style="margin-bottom: 30px;">
+                <!-- 图片卡片示例 - 可以根据实际图片进行替换 -->
+                <div class="gallery-item">
+                    <img src="../../src/assets/各类活动图片/1大文大理/图片2.png" alt="2025年决赛现场" loading="lazy">
+                    <span>📸 2025年决赛现场</span>
+                </div>
+                <div class="gallery-item">
+                    <img src="../../src/assets/各类活动图片/1大文大理/1402343CD12FFD3A5D3DA6CF80A32961.jpg" alt="2025年预赛现场" loading="lazy">
+                    <span>📸 2025年预赛现场</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 通讯稿 -->
+    <section id="newsletter" class="section">
+        <div class="container">
+            <h2 class="section-subtitle">竞赛通讯稿</h2>
+            <div class="newsletter-list">
+                <div class="newsletter-item">
+                    <div class="newsletter-header">
+                        <div class="newsletter-title-group">
+                            <span class="newsletter-icon">📰</span>
+                            <h3>2025年第三届大文大理竞赛预赛通讯稿</h3>
+                        </div>
+                        <span class="newsletter-date">2025年</span>
+                    </div>
+                    <p class="newsletter-summary">第三届南京大学"大文大理"跨学科创新竞赛于2025年成功举办，本届竞赛吸引了众多优秀学生参与，展现了南大学子的跨学科思维能力和创新精神...
+                    </p>
+                    <div class="newsletter-actions">
+                        <a href="../../src/components/0_大文大理预赛总结推送文稿.pdf" class="btn btn-primary"
+                            target="_blank">阅读全文</a>
+                        <a href="../../src/components/0_大文大理预赛总结推送文稿.pdf" class="btn btn-outline" download>下载PDF</a>
+                    </div>
+                </div>
+                <div class="newsletter-item">
+                    <div class="newsletter-header">
+                        <div class="newsletter-title-group">
+                            <span class="newsletter-icon">📰</span>
+                            <h3>2025年第三届大文大理竞赛决赛通讯稿</h3>
+                        </div>
+                        <span class="newsletter-date">2025年</span>
+                    </div>
+                    <p class="newsletter-summary">第三届南京大学"大文大理"跨学科创新竞赛于2025年成功举办，本届竞赛吸引了众多优秀学生参与，展现了南大学子的跨学科思维能力和创新精神...
+                    </p>
+                    <div class="newsletter-actions">
+                        <a href="../../src/components/0_大文大理知识竞赛决赛通讯稿.pdf" class="btn btn-primary"
+                            target="_blank">阅读全文</a>
+                        <a href="../../src/components/0_大文大理知识竞赛决赛通讯稿.pdf" class="btn btn-outline" download>下载PDF</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 相关链接 -->
+    <section id="links" class="section">
+        <div class="container">
+            <h2 class="section-subtitle">相关链接</h2>
+            <div class="links-grid">
+                <a href="../problems.html#dawenda-problems" class="link-card">
+                    <div class="link-icon">📝</div>
+                    <h3>历年赛题</h3>
+                    <p>查看往年大文大理竞赛题目</p>
+                </a>
+                <a href="https://table.nju.edu.cn/dtable/links/367da8a6c8314a9c945f" target="_blank" class="link-card">
+                    <div class="link-icon">✍️</div>
+                    <h3>投稿入口</h3>
+                    <p>投稿您的原创赛题</p>
+                </a>
+                <a href="../activities.html#competition" class="link-card">
+                    <div class="link-icon">🏃</div>
+                    <h3>其他竞赛</h3>
+                    <p>了解更多竞赛活动</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>关于支点学社</h3>
+                    <p>南京大学支点学社创立于1999年，以物理为支点推动本科生科研创新，核心价值为"学术传承、科创实践、跨学科融合"。</p>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul class="quick-links-grid">
+                        <li><a href="../../index.html#home">首页</a></li>
+                        <li><a href="../news.html">新闻</a></li>
+                        <li><a href="../journal.html">社刊</a></li>
+                        <li><a href="../submission.html">投稿</a></li>
+                        <li><a href="../activities.html">活动</a></li>
+                        <li><a href="../problems.html">赛题</a></li>
+                        <li><a href="../tools.html">工具</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>联系我们</h4>
+                    <p>📧 wangylphy@nju.edu.cn</p>
+                    <p>📍 南京市栖霞区仙林大道163号</p>
+                    <p>👥 QQ群：666419575</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <img src="../../src/assets/杂志素材/支点.webp" alt="支点学社Logo" class="footer-logo">
+                <p>&copy; 2025 支点学社. All rights reserved. ICP备案/许可证编号：
+                    <a href="https://beian.miit.gov.cn/" target="_blank">豫ICP备2025144939号-1</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../src/main.js"></script>
+</body>
+
+</html>

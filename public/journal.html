@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>支点学社 - 社刊</title>
+    <link rel="stylesheet" href="../src/assets/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC&family=Ma+Shan+Zheng&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- 粒子背景 -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- 导航栏 - 保持与首页一致 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="../src/assets/circle.webp" alt="支点学社Logo" class="logo">
+                <h2>支点学社</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../index.html#home" class="nav-link">首页</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="news.html" class="nav-link">新闻</a>
+                    <div class="dropdown-content">
+                        <a href="news.html#latest">最新动态</a>
+                        <a href="news.html#archive">过往新闻</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="journal.html" class="nav-link">社刊</a>
+                    <div class="dropdown-content">
+                        <a href="journal.html#current">最新期刊</a>
+                        <a href="journal.html#archive">过往期刊</a>
+                        <a href="journal.html#nobel-prize">诺奖解读</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="submission.html" class="nav-link">投稿</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="activities.html" class="nav-link">活动</a>
+                    <div class="dropdown-content">
+                        <a href="activities.html#cupt">CUPT</a>
+                        <a href="activities.html#competition">其他竞赛</a>
+                        <a href="activities.html#lecture">学术讲座</a>
+                        <a href="activities.html#volunteer-teaching">支教</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="problems.html" class="nav-link">赛题</a>
+                    <div class="dropdown-content">
+                        <a href="problems.html#cupt-problems">CUPT赛题</a>
+                        <a href="problems.html#original-problems">原创赛题</a>
+                        <a href="problems.html#dawenda-problems">大文大理赛题</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="tools.html" class="nav-link">工具</a>
+                    <div class="dropdown-content">
+                        <a href="tools/comsol.html">COMSOL</a>
+                        <a href="tools/matlab.html">MATLAB</a>
+                        <a href="tools/mathematica.html">Mathematica</a>
+                        <a href="tools/python.html">Python</a>
+                        <a href="tools/tracker.html">Tracker</a>
+                        <a href="tools/ansys.html">ANSYS</a>
+                        <a href="tools/latex.html">LaTeX 编辑器</a>
+                        <a href="tools/zotero.html">Zotero</a>
+                        <a href="tools/3d.html">3D 打印软件</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主内容区 -->
+    <section id="current" class="section">
+        <div class="container">
+            <h1 class="section-title">最新期刊</h1>
+            <div class="journal-grid">
+                <div class="journal-card">
+                    <div class="journal-cover">
+                        <span class="journal-placeholder">第30期</span>
+                    </div>
+                    <h3>支点学社 第30期 (2018年11月)</h3>
+                    <p>纪念闵乃本先生特刊</p>
+                    <a href="../src/components/NO.30 Nov 2018.pdf" target="_blank" class="btn btn-outline">阅读期刊</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="archive" class="section">
+        <div class="container">
+            <h1 class="section-title">过往期刊</h1>
+            <div class="waterfall-container">
+                <div class="waterfall-column">
+                    <div class="journal-card waterfall-card">
+                        <div class="journal-cover">
+                            <span class="journal-placeholder">第30期</span>
+                        </div>
+                        <h3>支点学社 第30期 (2018年11月)</h3>
+                        <p>纪念闵乃本先生特刊</p>
+                        <a href="../src/components/NO.30 Nov 2018.pdf" target="_blank" class="btn btn-outline">阅读期刊</a>
+                    </div>
+
+                    <div class="journal-card waterfall-card">
+                        <div class="journal-cover">
+                            <span class="journal-placeholder">第27期</span>
+                        </div>
+                        <h3>支点学社 第27期 (2015年10月)</h3>
+                        <p>南京大学物理学科成立100周年特刊。</p>
+                        <a href="../src/components/NO.27 Oct 2015.pdf" target="_blank" class="btn btn-outline">阅读期刊</a>
+                    </div>
+
+                    <div class="journal-card waterfall-card">
+                        <div class="journal-cover">
+                            <span class="journal-placeholder">第24期</span>
+                        </div>
+                        <h3>支点学社 第24期 (2012年12月)</h3>
+                        <p>实验发现与希格斯粒子特征一致的新粒子。</p>
+                        <a href="../src/components/NO.24 Dec 2012.pdf" target="_blank" class="btn btn-outline">阅读期刊</a>
+                    </div>
+
+                    <div class="journal-card waterfall-card">
+                        <div class="journal-cover">
+                            <span class="journal-placeholder">第21期</span>
+                        </div>
+                        <h3>支点学社 第21期 (2010年12月)</h3>
+                        <p>太阳帆飞船：大师们的天平。</p>
+                        <a href="../src/components/NO.21 Dec 2010.pdf" target="_blank" class="btn btn-outline">阅读期刊</a>
+                    </div>
+
+                    <div class="journal-card waterfall-card">
+                        <div class="journal-cover">
+                            <span class="journal-placeholder">第18期</span>
+                        </div>
+                        <h3>支点学社 第18期 (2009年6月)</h3>
+                        <p>熵：复杂性的革命。</p>
+                        <a href="../src/components/NO.18 Jun 2009.pdf" target="_blank" class="btn btn-outline">阅读期刊</a>
+                    </div>
+
+                    <div class="journal-card waterfall-card">
+                        <div class="journal-cover">
+                            <span class="journal-placeholder">第15期</span>
+                        </div>
+                        <h3>支点学社 第15期 (2018年1月)</h3>
+                        <p>宇宙微波背景辐射·支点学社特别报道。</p>
+                        <a href="../src/components/NO.15 Jan 2018.pdf" target="_blank" class="btn btn-outline">阅读期刊</a>
+                    </div>
+
+                    <div class="journal-card waterfall-card">
+                        <div class="journal-cover">
+                            <span class="journal-placeholder">第12期</span>
+                        </div>
+                        <h3>支点学社 第12期 (2006年5月)</h3>
+                        <p>奋发图强，开拓创新——中科院院士都有为访谈。</p>
+                        <a href="../src/components/NO.12 May 2006.pdf" target="_blank" class="btn btn-outline">阅读期刊</a>
+                    </div>
+
+                    <div class="journal-card waterfall-card">
+                        <div class="journal-cover">
+                            <span class="journal-placeholder">第9期</span>
+                        </div>
+                        <h3>支点学社 第9期 (2011年4月)</h3>
+                        <p>基础研究在中国——Nature中国特刊追踪。</p>
+                        <a href="../src/components/NO.9 Apr 2011.pdf" target="_blank" class="btn btn-outline">阅读期刊</a>
+                    </div>
+
+                    <div class="journal-card waterfall-card">
+                        <div class="journal-cover">
+                            <span class="journal-placeholder">第6期</span>
+                        </div>
+                        <h3>支点学社 第6期 (2003年)</h3>
+                        <p>我的世界观——爱因斯坦。</p>
+                        <a href="../src/components/NO.6 2003.pdf" target="_blank" class="btn btn-outline">阅读期刊</a>
+                    </div>
+
+                    <div class="journal-card waterfall-card">
+                        <div class="journal-cover">
+                            <span class="journal-placeholder">第3期</span>
+                        </div>
+                        <h3>支点学社 第3期 (2000年)</h3>
+                        <p>加上灵魂，赌上生命，我们在所不惜。</p>
+                        <a href="../src/components/NO.3 2000.pdf" target="_blank" class="btn btn-outline">阅读期刊</a>
+                    </div>
+                </div>
+
+                <div class="waterfall-column">
+                    <div class="journal-card waterfall-card">
+                        <div class="journal-cover">
+                            <span class="journal-placeholder">第29期</span>
+                        </div>
+                        <h3>支点学社 第29期 (2017年4月)</h3>
+                        <p>物理学家那些事——震惊！薛定谔竟然是这样的人。</p>
+                        <a href="../src/components/NO.29 Apr 2017.pdf" target="_blank" class="btn btn-outline">阅读期刊</a>
+                    </div>
+
+                    <div class="journal-card waterfall-card">
+                        <div class="journal-cover">
+                            <span class="journal-placeholder">第26期</span>
+                        </div>
+                        <h3>支点学社 第26期 (2014年12月)</h3>
+                        <p>星穿——是科学还是科幻？</p>
+                        <a href="../src/components/NO.26 Dec 2014.pdf" target="_blank" class="btn btn-outline">阅读期刊</a>
+                    </div>
+
+                    <div class="journal-card waterfall-card">
+                        <div class="journal-cover">
+                            <span class="journal-placeholder">第23期</span>
+                        </div>
+                        <h3>支点学社 第23期 (2011年12月)</h3>
+                        <p>捕风捉影之中微子探索。</p>
+                        <a href="../src/components/NO.23 Dec 2011.pdf" target="_blank" class="btn btn-outline">阅读期刊</a>
+                    </div>
+
+                    <div class="journal-card waterfall-card">
+                        <div class="journal-cover">
+                            <span class="journal-placeholder">第20期</span>
+                        </div>
+                        <h3>支点学社 第20期 (2010年6月)</h3>
+                        <p>2012末日传说——真相还是谎言？</p>
+                        <a href="../src/components/NO.20 Jun 2010.pdf" target="_blank" class="btn btn-outline">阅读期刊</a>
+                    </div>
+
+                    <div class="journal-card waterfall-card">
+                        <div class="journal-cover">
+                            <span class="journal-placeholder">第17期</span>
+                        </div>
+                        <h3>支点学社 第17期 (2009年1月)</h3>
+                        <p>标准模型何去何从？一切将由LHC回答。</p>
+                        <a href="../src/components/NO.17 Jan 2009.pdf" target="_blank" class="btn btn-outline">阅读期刊</a>
+                    </div>
+
+                    <div class="journal-card waterfall-card">
+                        <div class="journal-cover">
+                            <span class="journal-placeholder">第14期</span>
+                        </div>
+                        <h3>支点学社 第14期 (2007年9月)</h3>
+                        <p>国家自然科学一等奖——闵乃本院士专访。</p>
+                        <a href="../src/components/NO.14 Sept 2007.pdf" target="_blank" class="btn btn-outline">阅读期刊</a>
+                    </div>
+
+                    <div class="journal-card waterfall-card">
+                        <div class="journal-cover">
+                            <span class="journal-placeholder">第11期</span>
+                        </div>
+                        <h3>支点学社 第11期 (2005年12月)</h3>
+                        <p>纪念爱因斯坦相对论诞生百周年特别专题，庆祝世界物理年。</p>
+                        <a href="../src/components/NO.11 Dec 2005.pdf" target="_blank" class="btn btn-outline">阅读期刊</a>
+                    </div>
+
+                    <div class="journal-card waterfall-card">
+                        <div class="journal-cover">
+                            <span class="journal-placeholder">第8期</span>
+                        </div>
+                        <h3>支点学社 第8期 (2004年5月)</h3>
+                        <p>大一统之旅——科学，你将何去何从？</p>
+                        <a href="../src/components/NO.8 May 2004.pdf" target="_blank" class="btn btn-outline">阅读期刊</a>
+                    </div>
+
+                    <div class="journal-card waterfall-card">
+                        <div class="journal-cover">
+                            <span class="journal-placeholder">第4&5期</span>
+                        </div>
+                        <h3>支点学社 第4&5期 (2001年)</h3>
+                        <p>分子手性生命起源的指示灯。</p>
+                        <a href="../src/components/NO.4_and_5 2001.pdf" target="_blank" class="btn btn-outline">阅读期刊</a>
+                    </div>
+
+                    <div class="journal-card waterfall-card">
+                        <div class="journal-cover">
+                            <span class="journal-placeholder">创刊号</span>
+                        </div>
+                        <h3>支点学社 创刊号 (1999年6月)</h3>
+                        <p>给我一个支点，我能撬起地球。</p>
+                        <a href="../src/components/NO.1 June 1999.pdf" target="_blank" class="btn btn-outline">阅读期刊</a>
+                    </div>
+                </div>
+
+                <div class="waterfall-column">
+                    <div class="journal-card waterfall-card">
+                        <div class="journal-cover">
+                            <span class="journal-placeholder">第28期</span>
+                        </div>
+                        <h3>支点学社 第28期 (2016年9月)</h3>
+                        <p>话说三体——小说离现实还有多远。</p>
+                        <a href="../src/components/NO.28 Sept 2016.pdf" target="_blank" class="btn btn-outline">阅读期刊</a>
+                    </div>
+
+                    <div class="journal-card waterfall-card">
+                        <div class="journal-cover">
+                            <span class="journal-placeholder">第25期</span>
+                        </div>
+                        <h3>支点学社 第25期 (2013年12月)</h3>
+                        <p>传奇量子史话——上帝是否掷骰子？</p>
+                        <a href="../src/components/NO.25 Dec 2013.pdf" target="_blank" class="btn btn-outline">阅读期刊</a>
+                    </div>
+
+                    <div class="journal-card waterfall-card">
+                        <div class="journal-cover">
+                            <span class="journal-placeholder">第22期</span>
+                        </div>
+                        <h3>支点学社 第22期 (2011年6月)</h3>
+                        <p>俊杰南大——南京大学NYPT专题。</p>
+                        <a href="../src/components/NO.22 Jun 2011.pdf" target="_blank" class="btn btn-outline">阅读期刊</a>
+                    </div>
+
+                    <div class="journal-card waterfall-card">
+                        <div class="journal-cover">
+                            <span class="journal-placeholder">第19期</span>
+                        </div>
+                        <h3>支点学社 第19期 (2009年12月)</h3>
+                        <p>悼念“中国导弹之父”钱学森。</p>
+                        <a href="../src/components/NO.19 Dec 2009.pdf" target="_blank" class="btn btn-outline">阅读期刊</a>
+                    </div>
+
+                    <div class="journal-card waterfall-card">
+                        <div class="journal-cover">
+                            <span class="journal-placeholder">第16期</span>
+                        </div>
+                        <h3>支点学社 第16期 (2008年6月)</h3>
+                        <p>论坛：曲径通幽处，科学梦工厂。</p>
+                        <a href="../src/components/NO.16 June 2008.pdf" target="_blank" class="btn btn-outline">阅读期刊</a>
+                    </div>
+
+                    <div class="journal-card waterfall-card">
+                        <div class="journal-cover">
+                            <span class="journal-placeholder">第13期</span>
+                        </div>
+                        <h3>支点学社 第13期 (2006年12月)</h3>
+                        <p>弘扬长征精神，共创南大辉煌——纪念长征胜利70周年。</p>
+                        <a href="../src/components/NO.13 Dec 2006.pdf" target="_blank" class="btn btn-outline">阅读期刊</a>
+                    </div>
+
+                    <div class="journal-card waterfall-card">
+                        <div class="journal-cover">
+                            <span class="journal-placeholder">第10期</span>
+                        </div>
+                        <h3>支点学社 第10期 (2005年5月)</h3>
+                        <p>《哥本哈根》舞台剧——物理学百年荣耀。</p>
+                        <a href="../src/components/NO.10 May 2005.pdf" target="_blank" class="btn btn-outline">阅读期刊</a>
+                    </div>
+
+                    <div class="journal-card waterfall-card">
+                        <div class="journal-cover">
+                            <span class="journal-placeholder">第7期</span>
+                        </div>
+                        <h3>支点学社 第7期 (2003年11月)</h3>
+                        <p>国家固体微结构实验室奠基人——冯端院士。</p>
+                        <a href="../src/components/NO.7 Nov 2003.pdf" target="_blank" class="btn btn-outline">阅读期刊</a>
+                    </div>
+
+                    <div class="journal-card waterfall-card">
+                        <div class="journal-cover">
+                            <span class="journal-placeholder">特刊</span>
+                        </div>
+                        <h3>支点学社 特刊 (2013年9月)</h3>
+                        <p>好奇心：慢慢物理路上的良伴。</p>
+                        <a href="../src/components/NO.x Sep 2013.pdf" target="_blank" class="btn btn-outline">阅读期刊</a>
+                    </div>
+
+                    <div class="journal-card waterfall-card">
+                        <div class="journal-cover">
+                            <span class="journal-placeholder">第2期</span>
+                        </div>
+                        <h3>支点学社 第2期 (2000年)</h3>
+                        <p>21世纪命运之神正在敲年轻一代的门。</p>
+                        <a href="../src/components/NO.2 2000.pdf" target="_blank" class="btn btn-outline">阅读期刊</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="nobel-prize" class="section">
+        <div class="container">
+            <h1 class="section-title">诺奖解读</h1>
+            <div class="news-grid">
+                <!-- 这里复用新闻卡片样式展示诺奖解读 -->
+                <div class="news-card">
+                    <p class="news-date">敬请期待</p>
+                    <h3>下一期</h3>
+                    <p>敬请期待</p>
+                    <a href="#" class="read-more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 - 保持与首页一致 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>关于支点学社</h3>
+                    <p>南京大学支点学社创立于1999年，以物理为支点推动本科生科研创新，核心价值为"学术传承、科创实践、跨学科融合"。</p>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul class="quick-links-grid">
+                        <li><a href="../index.html#home">首页</a></li>
+                        <li><a href="news.html">新闻</a></li>
+                        <li><a href="journal.html">社刊</a></li>
+                        <li><a href="submission.html">投稿</a></li>
+                        <li><a href="activities.html">活动</a></li>
+                        <li><a href="problems.html">赛题</a></li>
+                        <li><a href="tools.html">工具</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>联系我们</h4>
+                    <p>📧 wangylphy@nju.edu.cn</p>
+                    <p>📍 南京市栖霞区仙林大道163号</p>
+                    <p>👥 QQ群：666419575</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <img src="../src/assets/杂志素材/支点.webp" alt="支点学社Logo" class="footer-logo">
+                <p>&copy; 2025 支点学社. All rights reserved. ICP备案/许可证编号：
+                    <a href="https://beian.miit.gov.cn/" target="_blank">豫ICP备2025144939号-1</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../src/main.js"></script>
+</body>
+
+</html>

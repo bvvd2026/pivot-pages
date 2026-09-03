@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>支点学社 - 活动</title>
+    <link rel="stylesheet" href="../src/assets/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC&family=Ma+Shan+Zheng&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- 粒子背景 -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- 导航栏 - 保持与首页一致 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="../src/assets/circle.webp" alt="支点学社Logo" class="logo">
+                <h2>支点学社</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../index.html#home" class="nav-link">首页</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="news.html" class="nav-link">新闻</a>
+                    <div class="dropdown-content">
+                        <a href="news.html#latest">最新动态</a>
+                        <a href="news.html#archive">过往新闻</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="journal.html" class="nav-link">社刊</a>
+                    <div class="dropdown-content">
+                        <a href="journal.html#current">最新期刊</a>
+                        <a href="journal.html#archive">过往期刊</a>
+                        <a href="journal.html#nobel-prize">诺奖解读</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="submission.html" class="nav-link">投稿</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="activities.html" class="nav-link">活动</a>
+                    <div class="dropdown-content">
+                        <a href="activities.html#cupt">CUPT</a>
+                        <a href="activities.html#competition">其他竞赛</a>
+                        <a href="activities.html#lecture">学术讲座</a>
+                        <a href="activities.html#volunteer-teaching">支教</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="problems.html" class="nav-link">赛题</a>
+                    <div class="dropdown-content">
+                        <a href="problems.html#cupt-problems">CUPT赛题</a>
+                        <a href="problems.html#original-problems">原创赛题</a>
+                        <a href="problems.html#dawenda-problems">大文大理赛题</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="tools.html" class="nav-link">工具</a>
+                    <div class="dropdown-content">
+                        <a href="tools/comsol.html">COMSOL</a>
+                        <a href="tools/matlab.html">MATLAB</a>
+                        <a href="tools/mathematica.html">Mathematica</a>
+                        <a href="tools/python.html">Python</a>
+                        <a href="tools/tracker.html">Tracker</a>
+                        <a href="tools/ansys.html">ANSYS</a>
+                        <a href="tools/latex.html">LaTeX 编辑器</a>
+                        <a href="tools/zotero.html">Zotero</a>
+                        <a href="tools/3d.html">3D 打印软件</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主内容区 -->
+    <section id="cupt" class="section">
+        <div class="container">
+            <h1 class="section-title">CUPT</h1>
+            <div class="activities-grid">
+                <div class="activity-card">
+                    <h3 class="activity-icon">🏆</h3>
+                    <h3>CUPT参赛与准备相关问题Q&A</h3>
+                    <p>对问的比较多的CUPT相关问题作一些说明。</p>
+                    <a href="https://www.yuque.com/u60045445/mu5f17/mxgxgy9lsfm1qcrh?singleDoc#" class="btn btn-outline"
+                        target="_blank">了解更多</a>
+                </div>
+                <div class="activity-card">
+                    <h3 class="activity-icon">🔬</h3>
+                    <h3>CUPT官方网站</h3>
+                    <p>CUPT官方网站，可以查看历年赛题、获奖名单等。</p>
+                    <a href="https://pt.nankai.edu.cn/cupt/list.htm" class="btn btn-outline" target="_blank">查看详情</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="competition" class="section">
+        <div class="container">
+            <h1 class="section-title">其他竞赛</h1>
+            <div class="activities-grid">
+                <div class="activity-card">
+                    <h3 class="activity-icon">⚛️</h3>
+                    <h3>创意物理实验竞赛</h3>
+                    <p>组织学生参与校级创意物理实验竞赛，提升学生理论实践能力。</p>
+                    <a href="../src/components/宣传视频.mp4" class="btn btn-outline" target="_blank">宣传视频</a>
+                </div>
+                <div class="activity-card">
+                    <h3 class="activity-icon">💡</h3>
+                    <h3>大文大理知识竞赛</h3>
+                    <p>大文大理知识竞赛，鼓励大文大理知识的学习和应用，提升学生综合素质。</p>
+                    <a href="activities/art_and_sci.html" class="btn btn-outline">查看详情</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="lecture" class="section">
+        <div class="container">
+            <h1 class="section-title">学术讲座</h1>
+            <div class="activities-grid">
+                <div class="activity-card">
+                    <h3 class="activity-icon">🗣️</h3>
+                    <h3>南雍学者7+1系列讲座</h3>
+                    <p>文献查找和阅读技巧、拍照工具的帧率介绍以及tracker软件的使用等。</p>
+                    <a href="https://www.yuque.com/u60045445/mu5f17/ou7ny72y13gfcvyf?singleDoc#" class="btn btn-outline"
+                        target="_blank">了解更多</a>
+                </div>
+                <div class="activity-card">
+                    <h3 class="activity-icon">🎓</h3>
+                    <h3>南青物语：前沿物理推介会</h3>
+                    <p>邀请优秀学长学姐，分享前沿物理知识，激发学生对物理的兴趣。</p>
+                    <a href="../src/assets/6FC2A675008905CD8B0735A88AA72681.png" target="_blank"
+                        class="btn btn-outline">查看海报</a>
+                </div>
+                <div class="activity-card">
+                    <h3 class="activity-icon">🎯</h3>
+                    <h3>探知南大·遇见宁</h3>
+                    <p>走进南大校园，探索科学奥秘，与南大学子面对面交流，感受学术氛围。</p>
+                    <a href="activities/meet_nju.html" class="btn btn-outline">了解更多</a>
+                </div>
+                <div class="activity-card">
+                    <h3 class="activity-icon">👥</h3>
+                    <h3>朋辈讲堂</h3>
+                    <p>优秀学长学姐分享学习经验、科研心得和升学建议，为同学们提供宝贵的指导。</p>
+                    <a href="activities/peer_lecture.html" class="btn btn-outline">了解更多</a>
+                </div>
+                <div class="activity-card">
+                    <h3 class="activity-icon">💡</h3>
+                    <h3>物道无穷经验分享沙龙</h3>
+                    <p>深度交流物理学习心得，探讨科研前沿话题，在思想碰撞中共同成长。</p>
+                    <a href="activities/physics_salon.html" class="btn btn-outline">了解更多</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="volunteer-teaching" class="section">
+        <div class="container">
+            <h1 class="section-title">支教活动</h1>
+            <div class="activities-grid">
+                <div class="activity-card">
+                    <h3 class="activity-icon">🌟</h3>
+                    <h3>实验演示支教</h3>
+                    <p><strong>举办时间：</strong>11-12月</p>
+                    <p><strong>面向对象：</strong>社团成员</p>
+                    <p><strong>活动简介：</strong>"社团进西部"是社管部组织的科普活动，讲解志愿者将在线上与南大研支团西部支教点中学生连线，展现支点风采，传播科学知识，发扬南大人的精神品格，为西部山区学子提供一扇开拓视野的窗口。
+                    </p>
+                    <p>2024支点学社社团进西部活动记录视频，请点击播放观看。</p>
+                    <a href="../src/components/2024支点学社社团进西部.mp4" target="_blank" class="btn btn-outline">点击播放</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 - 保持与首页一致 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>关于支点学社</h3>
+                    <p>南京大学支点学社创立于1999年，以物理为支点推动本科生科研创新，核心价值为"学术传承、科创实践、跨学科融合"。</p>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul class="quick-links-grid">
+                        <li><a href="../index.html#home">首页</a></li>
+                        <li><a href="news.html">新闻</a></li>
+                        <li><a href="journal.html">社刊</a></li>
+                        <li><a href="submission.html">投稿</a></li>
+                        <li><a href="activities.html">活动</a></li>
+                        <li><a href="problems.html">赛题</a></li>
+                        <li><a href="tools.html">工具</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>联系我们</h4>
+                    <p>📧 wangylphy@nju.edu.cn</p>
+                    <p>📍 南京市栖霞区仙林大道163号</p>
+                    <p>👥 QQ群：666419575</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <img src="../src/assets/杂志素材/支点.webp" alt="支点学社Logo" class="footer-logo">
+                <p>&copy; 2025 支点学社. All rights reserved. ICP备案/许可证编号：
+                    <a href="https://beian.miit.gov.cn/" target="_blank">豫ICP备2025144939号-1</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../src/main.js"></script>
+</body>
+
+</html>

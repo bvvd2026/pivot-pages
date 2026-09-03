@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>支点学社 - 物道无穷经验分享沙龙</title>
+    <link rel="stylesheet" href="../../src/assets/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC&family=Ma+Shan+Zheng&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- 粒子背景 -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="../../src/assets/circle.webp" alt="支点学社Logo" class="logo">
+                <h2>支点学社</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../../index.html#home" class="nav-link">首页</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="../news.html" class="nav-link">新闻</a>
+                    <div class="dropdown-content">
+                        <a href="../news.html#latest">最新动态</a>
+                        <a href="../news.html#archive">过往新闻</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="../journal.html" class="nav-link">社刊</a>
+                    <div class="dropdown-content">
+                        <a href="../journal.html#current">最新期刊</a>
+                        <a href="../journal.html#archive">过往期刊</a>
+                        <a href="../journal.html#nobel-prize">诺奖解读</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="../submission.html" class="nav-link">投稿</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="../activities.html" class="nav-link">活动</a>
+                    <div class="dropdown-content">
+                        <a href="../activities.html#cupt">CUPT</a>
+                        <a href="../activities.html#competition">其他竞赛</a>
+                        <a href="../activities.html#lecture">学术讲座</a>
+                        <a href="../activities.html#volunteer-teaching">支教</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="../problems.html" class="nav-link">赛题</a>
+                    <div class="dropdown-content">
+                        <a href="../problems.html#cupt-problems">CUPT赛题</a>
+                        <a href="../problems.html#original-problems">原创赛题</a>
+                        <a href="../problems.html#dawenda-problems">大文大理赛题</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="../tools.html" class="nav-link">工具</a>
+                    <div class="dropdown-content">
+                        <a href="../tools/comsol.html">COMSOL</a>
+                        <a href="../tools/matlab.html">MATLAB</a>
+                        <a href="../tools/mathematica.html">Mathematica</a>
+                        <a href="../tools/python.html">Python</a>
+                        <a href="../tools/tracker.html">Tracker</a>
+                        <a href="../tools/ansys.html">ANSYS</a>
+                        <a href="../tools/latex.html">LaTeX 编辑器</a>
+                        <a href="../tools/zotero.html">Zotero</a>
+                        <a href="../tools/3d.html">3D 打印软件</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 页面头部 -->
+    <section class="section">
+        <div class="container">
+            <div class="page-header">
+                <a href="../activities.html#lecture" class="back-link">← 返回活动页面</a>
+                <h1 class="section-title">物道无穷经验分享沙龙</h1>
+                <p class="page-description">深度交流物理学习心得，探讨科研前沿话题，在思想碰撞中共同成长</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 活动简介 -->
+    <section id="introduction" class="section">
+        <div class="container">
+            <h2 class="section-subtitle">活动简介</h2>
+            <div class="intro-content">
+                <div class="intro-card">
+                    <div class="intro-icon">📅</div>
+                    <h3>举办时间与对象</h3>
+                    <p><strong>举办时间：</strong>各学期初</p>
+                    <p><strong>面向对象：</strong>主要为物理专业学生</p>
+                </div>
+                <div class="intro-card">
+                    <div class="intro-icon">🎯</div>
+                    <h3>活动背景</h3>
+                    <p>物理学院的本科培养中对于学生的学业和学术都做出了一定的要求，我们将开办朋辈同学之间的座谈讲座活动。</p>
+                </div>
+                <div class="intro-card">
+                    <div class="intro-icon">👥</div>
+                    <h3>分享内容</h3>
+                    <p>邀请高年级同学在学业学习、自我成长和学术科研活动方面进行交流，为同学们提供全方位的指导和建议。</p>
+                </div>
+                <div class="intro-card">
+                    <div class="intro-icon">💬</div>
+                    <h3>交流形式</h3>
+                    <p>主要通过讲座和互动形式和同学们交流学习，鼓励参与者积极发言，在思想碰撞中激发新的灵感和见解。</p>
+                </div>
+            </div>
+            <div style="margin-top: 30px; text-align: center;">
+                <a href="../activities.html#lecture" class="btn btn-outline" style="margin: 10px;">查看更多活动</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 活动现场 -->
+    <section id="activity-gallery" class="section">
+        <div class="container">
+            <h2 class="section-subtitle">活动现场</h2>
+            <p style="text-align: center; color: #aaa; margin-bottom: 40px;">精彩瞬间，记录每一次思想碰撞与学术交流</p>
+
+            <div class="gallery-grid" style="margin-bottom: 30px;">
+                <!-- 图片卡片示例 - 可以根据实际图片进行替换 -->
+                <div class="gallery-item">
+                    <img src="../../src/assets/各类活动图片/9物道无穷沙龙/14170E317CED6A6F5A475AEC9F594369.jpg" alt="主题分享" loading="lazy">
+                    <span>📸 主题分享</span>
+                </div>
+                <div class="gallery-item">
+                    <img src="../../src/assets/各类活动图片/9物道无穷沙龙/39A957F68C2FF75B31F770D653B9FC55.jpg" alt="圆桌讨论" loading="lazy">
+                    <span>📸 圆桌讨论</span>
+                </div>
+                <div class="gallery-item">
+                    <img src="../../src/assets/各类活动图片/9物道无穷沙龙/81CE8D1B79B8D2B7D71D537E93DFEC06.jpg" alt="自由交流" loading="lazy">
+                    <span>📸 自由交流</span>
+                </div>
+                <div class="gallery-item">
+                    <img src="../../src/assets/各类活动图片/9物道无穷沙龙/14170E317CED6A6F5A475AEC9F594369.jpg" alt="合影留念" loading="lazy">
+                    <span>📸 合影留念</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 相关链接 -->
+    <section id="links" class="section">
+        <div class="container">
+            <h2 class="section-subtitle">相关链接</h2>
+            <div class="links-grid">
+                <a href="../activities.html#lecture" class="link-card">
+                    <div class="link-icon">🎓</div>
+                    <h3>学术讲座</h3>
+                    <p>查看更多学术讲座活动</p>
+                </a>
+                <a href="peer_lecture.html" class="link-card">
+                    <div class="link-icon">👥</div>
+                    <h3>朋辈讲堂</h3>
+                    <p>学长学姐经验分享</p>
+                </a>
+                <a href="../activities.html" class="link-card">
+                    <div class="link-icon">🏃</div>
+                    <h3>更多活动</h3>
+                    <p>探索支点学社的其他精彩活动</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>关于支点学社</h3>
+                    <p>南京大学支点学社创立于1999年，以物理为支点推动本科生科研创新，核心价值为"学术传承、科创实践、跨学科融合"。</p>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul class="quick-links-grid">
+                        <li><a href="../../index.html#home">首页</a></li>
+                        <li><a href="../news.html">新闻</a></li>
+                        <li><a href="../journal.html">社刊</a></li>
+                        <li><a href="../submission.html">投稿</a></li>
+                        <li><a href="../activities.html">活动</a></li>
+                        <li><a href="../problems.html">赛题</a></li>
+                        <li><a href="../tools.html">工具</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>联系我们</h4>
+                    <p>📧 wangylphy@nju.edu.cn</p>
+                    <p>📍 南京市栖霞区仙林大道163号</p>
+                    <p>👥 QQ群：666419575</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <img src="../../src/assets/杂志素材/支点.webp" alt="支点学社Logo" class="footer-logo">
+                <p>&copy; 2025 支点学社. All rights reserved. ICP备案/许可证编号：
+                    <a href="https://beian.miit.gov.cn/" target="_blank">豫ICP备2025144939号-1</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../src/main.js"></script>
+</body>
+
+</html>

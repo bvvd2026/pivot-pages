@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>支点学社 - 南京大学物理学术社团</title>
+    <link rel="stylesheet" href="src/assets/styles.css">
+    <link rel="icon" href="/favicon.ico" type="image/ico">
+    <link rel="icon" type="image/ico" sizes="32x32" href="/favicon-32x32.ico">
+    <link rel="icon" type="image/ico" sizes="16x16" href="/favicon-16x16.ico">
+    <link rel="icon" type="image/ico" sizes="48x48" href="/favicon-48x48.ico">
+    <meta name="google-site-verification" content="TOD-62VjXEfQDPz75kaMGTJfTMVe5t100ZZvR9YvzL0" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC&family=Ma+Shan+Zheng&display=swap"
+        rel="stylesheet">
+    <style>
+        .wave-section {
+            position: relative;
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            padding-top: 50px;
+            /* Move icon down */
+        }
+
+        .wave-container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .wave-container canvas {
+            background: transparent;
+            /* Canvas background should be transparent */
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            /* 半透明黑色遮罩 */
+            z-index: 0;
+        }
+
+        body {
+            margin: 0;
+            background: black;
+            color: white;
+            /* display: flex; */
+            /* Removed to avoid affecting other sections */
+            /* justify-content: center; */
+            /* Removed to avoid affecting other sections */
+            /* align-items: center; */
+            /* Removed to avoid affecting other sections */
+            /* height: 150vh; */
+            /* Removed as it conflicts with existing layout */
+        }
+
+        .vertical-line {
+            border-left: 1px solid white;
+            height: 400px;
+            padding-left: 10px;
+            padding-right: 10px;
+            animation: vertical-line-float 8s ease-in-out infinite alternate;
+        }
+    </style>
+</head>
+
+<body class="homepage">
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="src/assets/circle.webp" alt="支点学社Logo" class="logo">
+                <h2>支点学社</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html#home" class="nav-link">首页</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="public/news.html" class="nav-link">新闻</a>
+                    <div class="dropdown-content">
+                        <a href="public/news.html#latest">最新动态</a>
+                        <a href="public/news.html#archive">过往新闻</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="public/journal.html" class="nav-link">社刊</a>
+                    <div class="dropdown-content">
+                        <a href="public/journal.html#current">最新期刊</a>
+                        <a href="public/journal.html#archive">过往期刊</a>
+                        <a href="public/journal.html#nobel-prize">诺奖解读</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="public/submission.html" class="nav-link">投稿</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="public/activities.html" class="nav-link">活动</a>
+                    <div class="dropdown-content">
+                        <a href="public/activities.html#cupt">CUPT</a>
+                        <a href="public/activities.html#competition">其他竞赛</a>
+                        <a href="public/activities.html#lecture">学术讲座</a>
+                        <a href="public/activities.html#volunteer-teaching">支教</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="public/problems.html" class="nav-link">赛题</a>
+                    <div class="dropdown-content">
+                        <a href="public/problems.html#cupt-problems">CUPT赛题</a>
+                        <a href="public/problems.html#original-problems">原创赛题</a>
+                        <a href="public/problems.html#dawenda-problems">大文大理赛题</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="public/tools.html" class="nav-link">工具</a>
+                    <div class="dropdown-content">
+                        <a href="public/tools/comsol.html">COMSOL</a>
+                        <a href="public/tools/matlab.html">MATLAB</a>
+                        <a href="public/tools/mathematica.html">Mathematica</a>
+                        <a href="public/tools/python.html">Python</a>
+                        <a href="public/tools/tracker.html">Tracker</a>
+                        <a href="public/tools/ansys.html">ANSYS</a>
+                        <a href="public/tools/latex.html">LaTeX 编辑器</a>
+                        <a href="public/tools/zotero.html">Zotero</a>
+                        <a href="public/tools/3d.html">3D 打印软件</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 粒子背景 -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- 首页部分 -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-image fade-in">
+                <img id="hero-image" src="src/assets/first_cover.webp" alt="支点学社" class="cover-image">
+            </div>
+            <div class="hero-text fade-in">
+                <div class="calligraphy-wrapper" aria-label="支点标志">
+                    <img id="pivot-logo" src="src/assets/支点标志svg2.svg" alt="支点标志" class="calligraphy-svg">
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- ED 图片展示部分 -->
+    <section id="ed" class="section ed-section">
+        <div class="container ed-container fade-in">
+            <img src="src/assets/处理ED图片.webp" alt="ED graphic" class="ed-image">
+            <img src="src/assets/2.webp" alt="ED text" class="ed-image">
+        </div>
+    </section>
+
+    <div class="wave-section">
+        <div class="overlay"></div>
+        <div class="wave-container fade-in">
+            <canvas id="wave" width="250" height="156"
+                alt="if schrodinger equation were a visual it would look like a volcano with waves underneath it going from left to right along the horizontal line beneath the volcano, as the waves hit midpoint they increase and maybe it is not a volcano, as I changed my canvas height and it became a mountain - its a little creepy but so is the whole dead/alive cat thing."></canvas>
+        </div>
+    </div>
+
+    <!-- 大师寄语卡片滚动部分 -->
+    <section id="master-message" class="section master-message-section">
+        <div class="container">
+            <h2 class="section-title">大师寄语</h2>
+            <div class="master-message-slider">
+                <div class="master-card">
+                    <img src="public/ed-carousel-images/处理ED图片文字.webp" alt="大师寄语" class="card-image">
+                </div>
+                <div class="master-card">
+                    <img src="public/ed-carousel-images/处理图片 (1).webp" alt="大师寄语" class="card-image">
+                </div>
+                <div class="master-card">
+                    <img src="public/ed-carousel-images/处理图片 (2).webp" alt="大师寄语" class="card-image">
+                </div>
+                <div class="master-card">
+                    <img src="public/ed-carousel-images/处理图片 (3).webp" alt="大师寄语" class="card-image">
+                </div>
+                <div class="master-card">
+                    <img src="public/ed-carousel-images/处理图片 (4).webp" alt="大师寄语" class="card-image">
+                </div>
+                <div class="master-card">
+                    <img src="public/ed-carousel-images/处理图片 (6).webp" alt="大师寄语" class="card-image">
+                </div>
+                <div class="master-card">
+                    <img src="public/ed-carousel-images/处理图片 (7).webp" alt="大师寄语" class="card-image">
+                </div>
+                <div class="master-card">
+                    <img src="public/ed-carousel-images/处理图片.webp" alt="大师寄语" class="card-image">
+                </div>
+                <div class="master-card">
+                    <img src="public/ed-carousel-images/新对话.webp" alt="大师寄语" class="card-image">
+                </div>
+                <button id="master-next" class="nav-btn">&gt;</button>
+                <button id="master-prev" class="nav-btn">&lt;</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 新闻部分 -->
+    <section id="news" class="section">
+        <div class="container">
+            <h2 class="section-title">最新新闻</h2>
+            <div class="news-grid">
+                <div class="news-card">
+                    <p class="news-date">2025年10月19日</p>
+                    <h3>CUPT2025国赛通讯</h3>
+                    <p>喜讯 | 南京大学代表队在 CUPT 斩获团体一等奖 & “最佳风采奖”</p>
+                    <a href="public/news.html#latest" class="read-more">阅读更多</a>
+                </div>
+                <div class="news-card">
+                    <p class="news-date">2025年5月23日</p>
+                    <h3>2025CUPT华东赛</h3>
+                    <p>南京大学代表队荣获2025年中国大学生物理学术竞赛（华东赛区）团体特等奖。</p>
+                    <a href="public/news.html#latest" class="read-more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 社刊部分 -->
+    <section id="journal" class="section">
+        <div class="container">
+            <h2 class="section-title">社刊文献</h2>
+            <div class="journal-grid">
+                <div class="journal-card">
+                    <div class="journal-cover">
+                        <div class="journal-placeholder">第30期</div>
+                    </div>
+                    <h3>支点学社期刊-第30期</h3>
+                    <p>本期为纪念闵乃本先生特刊。</p>
+                    <a href="public/journal.html" class="btn btn-outline">阅读更多</a>
+                </div>
+                <div class="journal-card">
+                    <div class="journal-cover">
+                        <div class="journal-placeholder">诺奖解读</div>
+                    </div>
+                    <h3>下一期</h3>
+                    <p>敬请期待</p>
+                    <a href="public/journal.html#nobel-prize" class="btn btn-outline">阅读更多</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 活动部分 -->
+    <section id="activities" class="section">
+        <div class="container">
+            <h2 class="section-title">竞赛与活动</h2>
+            <div class="activities-grid">
+                <div class="activity-card" onclick="window.location.href='public/activities.html#cupt'"
+                    style="cursor: pointer;">
+                    <div class="activity-icon">🏆</div>
+                    <h3>CUPT 全国大学生物理学术竞赛</h3>
+                    <p>国内最高水平的大学生物理学术竞赛，支点学社每年组织校内选拔和培训</p>
+                </div>
+                <div class="activity-card" onclick="window.location.href='public/activities.html#competition'"
+                    style="cursor: pointer;">
+                    <div class="activity-icon">📚</div>
+                    <h3>大文大理竞赛</h3>
+                    <p>南京大学传统学科竞赛，物理类题目由支点学社负责出题和评审</p>
+                </div>
+                <div class="activity-card" onclick="window.location.href='public/activities.html#lecture'"
+                    style="cursor: pointer;">
+                    <div class="activity-icon">🔬</div>
+                    <h3>学术讲座系列</h3>
+                    <p>定期举办物理学术讲座，涵盖理论物理、实验技术、仿真软件等主题</p>
+                </div>
+                <div class="activity-card" onclick="window.location.href='public/activities.html#volunteer-teaching'"
+                    style="cursor: pointer;">
+                    <div class="activity-icon">🎓</div>
+                    <h3>支教活动</h3>
+                    <p>组织学生前往偏远地区进行物理科普教育支教</p>
+                </div>
+                <div class="activity-card" onclick="window.location.href='public/activities.html#lecture'"
+                    style="cursor: pointer;">
+                    <div class="activity-icon">🎯</div>
+                    <h3>探知南大·遇见宁</h3>
+                    <p>走进南大校园，探索科学奥秘，与南大学子面对面交流，感受学术氛围</p>
+                </div>
+                <div class="activity-card" onclick="window.location.href='public/activities.html#lecture'"
+                    style="cursor: pointer;">
+                    <div class="activity-icon">👥</div>
+                    <h3>朋辈讲堂</h3>
+                    <p>优秀学长学姐分享学习经验、科研心得和升学建议，为同学们提供宝贵的指导</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 赛题部分 -->
+    <section id="problems" class="section">
+        <div class="container">
+            <h2 class="section-title">物理赛题库</h2>
+            <div class="problems-categories">
+                <div class="category-card">
+                    <h3>CUPT 官方赛题</h3>
+                    <p>历年CUPT竞赛官方题目，包含详细解析和参考资料</p>
+                    <div class="problem-count">50+ 题目</div>
+                    <a href="public/problems.html#cupt-problems" class="btn btn-primary">浏览题目</a>
+                </div>
+                <div class="category-card">
+                    <h3>原创赛题</h3>
+                    <p>由支点学社成员原创设计的物理竞赛题目</p>
+                    <div class="problem-count">30+ 题目</div>
+                    <a href="public/problems.html#original-problems" class="btn btn-primary">浏览题目</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 工具部分 -->
+    <section id="tools" class="section">
+        <div class="container">
+            <h2 class="section-title">物理仿真工具</h2>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <div class="tool-logo comsol">CM</div>
+                    </div>
+                    <h3>COMSOL Multiphysics</h3>
+                    <p>多物理场耦合仿真软件，适用于电磁、热传导、流体力学等领域</p>
+                    <div class="tool-features">
+                        <span class="feature">多物理场</span>
+                        <span class="feature">有限元</span>
+                    </div>
+                    <a href="public/tools/comsol.html" class="btn btn-outline">了解更多</a>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <div class="tool-logo matlab">MATLAB</div>
+                    </div>
+                    <h3>MATLAB</h3>
+                    <p>科学计算和数据分析平台，广泛应用于物理建模和数据处理</p>
+                    <div class="tool-features">
+                        <span class="feature">数值计算</span>
+                        <span class="feature">数据可视化</span>
+                    </div>
+                    <a href="public/tools/matlab.html" class="btn btn-outline">了解更多</a>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <div class="tool-logo mathematica">MA</div>
+                    </div>
+                    <h3>Mathematica</h3>
+                    <p>强大的符号计算和数学分析软件，支持复杂数学运算和可视化</p>
+                    <div class="tool-features">
+                        <span class="feature">符号计算</span>
+                        <span class="feature">数学建模</span>
+                    </div>
+                    <a href="public/tools/mathematica.html" class="btn btn-outline">了解更多</a>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <div class="tool-logo python">Python</div>
+                    </div>
+                    <h3>Python 科学计算</h3>
+                    <p>NumPy、SciPy、Matplotlib等库的使用，适用于物理建模和仿真</p>
+                    <div class="tool-features">
+                        <span class="feature">开源免费</span>
+                        <span class="feature">易于学习</span>
+                    </div>
+                    <a href="public/tools/python.html" class="btn btn-outline">了解更多</a>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <div class="tool-logo tracker">TR</div>
+                    </div>
+                    <h3>Tracker</h3>
+                    <p>基于视频的运动捕捉与分析工具。</p>
+                    <div class="tool-features">
+                        <span class="feature">视频追踪</span>
+                    </div>
+                    <a href="public/tools/tracker.html" class="btn btn-outline">了解更多</a>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <div class="tool-logo ansys">ANSYS</div>
+                    </div>
+                    <h3>ANSYS</h3>
+                    <p>工程级多物理场仿真平台。</p>
+                    <div class="tool-features">
+                        <span class="feature">有限元</span>
+                    </div>
+                    <a href="public/tools/ansys.html" class="btn btn-outline">了解更多</a>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <div class="tool-logo latex">LaTeX</div>
+                    </div>
+                    <h3>LaTeX 编辑器</h3>
+                    <p>Overleaf 等线上协作式 LaTeX 平台。</p>
+                    <div class="tool-features">
+                        <span class="feature">协作</span>
+                    </div>
+                    <a href="public/tools/latex.html" class="btn btn-outline">了解更多</a>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <div class="tool-logo zotero">ZT</div>
+                    </div>
+                    <h3>Zotero</h3>
+                    <p>免费开源的文献管理工具。</p>
+                    <div class="tool-features">
+                        <span class="feature">文献整理</span>
+                    </div>
+                    <a href="public/tools/zotero.html" class="btn btn-outline">了解更多</a>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <div class="tool-logo print3d">3DP</div>
+                    </div>
+                    <h3>3D 打印软件</h3>
+                    <p>Cura/PrusaSlicer 等切片工具。</p>
+                    <div class="tool-features">
+                        <span class="feature">切片</span>
+                    </div>
+                    <a href="public/tools/3d.html" class="btn btn-outline">了解更多</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>关于支点学社</h3>
+                    <p>南京大学支点学社创立于1999年，以物理为支点推动本科生科研创新，核心价值为"学术传承、科创实践、跨学科融合"。</p>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul class="quick-links-grid">
+                        <li><a href="index.html#home">首页</a></li>
+                        <li><a href="public/news.html">新闻</a></li>
+                        <li><a href="public/journal.html">社刊</a></li>
+                        <li><a href="public/submission.html">投稿</a></li>
+                        <li><a href="public/activities.html">活动</a></li>
+                        <li><a href="public/problems.html">赛题</a></li>
+                        <li><a href="public/tools.html">工具</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section" id="contact">
+                    <h4>联系我们</h4>
+                    <p>📧 wangylphy@nju.edu.cn</p>
+                    <p>📍 南京市栖霞区仙林大道163号</p>
+                    <p>👥 QQ群：666419575</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <img src="src/assets/杂志素材/支点.webp" alt="支点学社Logo" class="footer-logo">
+                <p>&copy; 2025 支点学社. All rights reserved. ICP备案/许可证编号：
+                    <a href="https://beian.miit.gov.cn/" target="_blank">豫ICP备2025144939号-1</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="src/main.js"></script>
+    <script>
+        const canvas = document.getElementById("wave");
+        const ctx = canvas.getContext("2d");
+
+        // High DPI support
+        const dpr = window.devicePixelRatio || 1;
+
+        // 响应式宽度：读取父容器实际宽度，兼容移动端
+        const cssWidth = (canvas.parentElement ? canvas.parentElement.clientWidth : 0) || 1000;
+        const cssHeight = 156;
+
+        // Set actual canvas size
+        canvas.width = cssWidth * dpr;
+        canvas.height = cssHeight * dpr;
+
+        // Scale CSS size
+        canvas.style.width = cssWidth + 'px';
+        canvas.style.height = cssHeight + 'px';
+
+        // Scale the drawing context
+        ctx.scale(dpr, dpr);
+
+        const width = cssWidth;
+        const height = cssHeight;
+        const N = 500;
+        const dx = 1;
+        let t = 0;
+
+        function draw() {
+            ctx.clearRect(0, 0, width, height);
+            ctx.lineWidth = 2;
+
+            ctx.beginPath();
+            ctx.strokeStyle = "rgba(100, 181, 246, 0.8)"; /* 改为页面主色调浅蓝色，不透明度为1 */
+
+            for (let i = 0; i < N; i++) {
+                let x = (i - N / 2) * dx;
+                let sigma = 30; /* 这是浅蓝色线的 sigma */
+                let k0 = 0.2;
+
+                // Gaussian envelope
+                let envelope = Math.exp(-x * x / (2 * sigma * sigma));
+
+                // Time-evolving wave: Re(ψ) = envelope * cos(kx - ωt)
+                let real = envelope * Math.cos(k0 * x - 0.02 * t);
+
+                let px = i * (width / N);
+                let py = height / 2 - real * 30; /* Reduced amplitude to fit in canvas */
+
+                if (i === 0) ctx.moveTo(px, py);
+                else ctx.lineTo(px, py);
+            }
+
+            ctx.stroke();
+
+            // Optional: probability density (|ψ|²)
+            ctx.beginPath();
+            ctx.strokeStyle = "rgba(255, 255, 0, 0.8)"; //yellow
+            for (let i = 0; i < N; i++) {
+                let x = (i - N / 2) * dx;
+                let sigma = 50; /* 将 sigma 增加到 50，使波包水平拉长 */
+                let k0 = 0.5;
+                let envelope = Math.exp(-x * x / (2 * sigma * sigma));
+                let prob = envelope * envelope;
+
+                let px = i * (width / N);
+                let py = height / 2 - prob * 60; /* 增加幅值，使其看起来更长 */
+
+                if (i === 0) ctx.moveTo(px, py);
+                else ctx.lineTo(px, py);
+            }
+            ctx.stroke();
+
+            t += 1;
+            requestAnimationFrame(draw);
+        }
+
+        draw();
+
+        // 大师寄语自动轮播功能
+        (function () {
+            const nextBtn = document.getElementById('master-next');
+            const slider = document.querySelector('.master-message-slider');
+            let isPaused = false;
+            let autoPlayInterval = null;
+
+            if (nextBtn && slider) {
+                // 启动自动轮播
+                function startAutoPlay() {
+                    if (autoPlayInterval) return; // 如果已经在运行，不重复启动
+
+                    autoPlayInterval = setInterval(function () {
+                        if (!isPaused) {
+                            nextBtn.click();
+                        }
+                    }, 2500);
+                }
+
+                // 鼠标进入时暂停轮播
+                slider.addEventListener('mouseenter', function () {
+                    isPaused = true;
+                });
+
+                // 鼠标离开时恢复轮播
+                slider.addEventListener('mouseleave', function () {
+                    isPaused = false;
+                });
+
+                // 启动自动轮播
+                startAutoPlay();
+            }
+        })();
+    </script>
+</body>
+
+</html>
